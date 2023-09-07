@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Projeto Rocketseat</title>
+</head>
+<body class="light">
+  <div class="container">
+    <div class="avatar">
+      <img src="./assets/avatar.png" />
+      <p>@maykbrito</p>
+    </div> <!-- avatar -->
+
+    <div class="border">
+      <div class="circle"></div>
+    </div> <!-- border -->
+
+    <ul>
+      <li><a href="#">Inscrever-se no NLW</a></li>
+      <li><a href="#">Baixar meu e-book</a></li>
+      <li><a href="#">Ver meu portfólio</a></li>
+      <li><a href="#">Conheça o Explorer</a></li>
+    </ul>
+
+    <div class="icons">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div> <!-- icons -->
+
+    <div class="text">
+      <span>Feito com ❤ pela <a href="#">Rocketseat</a></span>
+    </div> <!-- text -->
+  </div> <!-- container -->
+
+  <script>
+    const border = document.querySelector('.border');
+    border.addEventListener('click', () => {
+      document.querySelector('.circle').classList.toggle('active');
+      document.querySelector('.light').classList.toggle('active');
+
+      const img = document.querySelector('.avatar img');
+      if(document.querySelector('.light').classList.contains('active')) {
+        img.setAttribute('src', './assets/avatar-light.png');
+      }else {
+        img.setAttribute('src', './assets/avatar.png');
+      }
+    })
+  </script>
+</body>
+</html>
